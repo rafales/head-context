@@ -43,3 +43,13 @@ And that's pretty much it. You can `push_js`/`push_css`/`push_preload` from anyw
 * Works with Jinja2
 * Can be used outside of templates too
   * if you want to render a custom (form) widget for example
+
+## Installation
+
+Simply install `head-context` package:
+
+```bash
+pip install head-context
+# or with poetry
+poetry add head-context
+```
