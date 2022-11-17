@@ -447,7 +447,7 @@ test = ["pre-commit", "pytest"]
 name = "typing-extensions"
 version = "4.4.0"
 description = "Backported and Experimental Type Hints for Python 3.7+"
-category = "dev"
+category = "main"
 optional = false
 python-versions = ">=3.7"
 
@@ -473,7 +473,7 @@ python-versions = "*"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "86fa3fd4a2d04f4998259a5aa9bc26f1dcce33aebeec264973a3458408308684"
+content-hash = "caac7d70bb4a1a78df88987b40db96be81d765346f54e2eee1da741b2614b5cc"
 
 [metadata.files]
 appnope = [
