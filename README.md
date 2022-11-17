@@ -44,7 +44,7 @@ And that's pretty much it. You can `push_js`/`push_css`/`push_preload` from anyw
 * Can be used outside of templates too
   * if you want to render a custom (form) widget for example
 
-## Installation
+## Installation and setup
 
 Simply install `head-context` package:
 
@@ -53,3 +53,15 @@ pip install head-context
 # or with poetry
 poetry add head-context
 ```
+
+Add extension to the Jinja2 environment:
+
+```python
+
+from jinja2 import Environment
+
+env = Environment()
+env.add_extension("head_context.jinja_ext.HeadContextExtension")
+```
+
+and that's it! From now on you can use `push_css()`/`push_js()`/`push_preload()` and `head_placeholder()`.

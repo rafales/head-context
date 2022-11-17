@@ -5,7 +5,7 @@ from head_context.context import JsAsset, CssAsset
 
 def test_basic_rendering() -> None:
     env = Environment(autoescape=True, loader=PackageLoader("tests", "templates"))
-    env.add_extension("head_context.jinja_ext.MediaExtension")
+    env.add_extension("head_context.jinja_ext.HeadContextExtension")
 
     tpl = env.get_template("test/base.html")
     tpl.render()
@@ -13,7 +13,7 @@ def test_basic_rendering() -> None:
 
 def test_injecting_works() -> None:
     env = Environment(autoescape=True, loader=PackageLoader("tests", "templates"))
-    env.add_extension("head_context.jinja_ext.MediaExtension")
+    env.add_extension("head_context.jinja_ext.HeadContextExtension")
 
     tpl = env.from_string(
         """
@@ -81,7 +81,7 @@ def test_css_rendering() -> None:
 
 def test_asset_deduplication() -> None:
     env = Environment(autoescape=True, loader=PackageLoader("tests", "templates"))
-    env.add_extension("head_context.jinja_ext.MediaExtension")
+    env.add_extension("head_context.jinja_ext.HeadContextExtension")
 
     tpl = env.from_string(
         """
