@@ -1,0 +1,35 @@
+[tool.poetry]
+name = "head-context"
+version = "0.1.0"
+description = ""
+authors = ["Rafal Stozek <rafal.stozek@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+repository = "https://github.com/rafales/head-context"
+keywords = ["templating", "jinja2"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Programming Language :: Python :: 3",
+    "Typing :: Typed"
+    ]
+
+
+[tool.poetry.dependencies]
+python = "^3.8"
+
+[tool.poetry.dev-dependencies]
+pytest = "^7.2.0"
+pytest-watch = "^4.2.0"
+Jinja2 = "^3.1.2"
+black = "^22.10.0"
+mypy = "^0.991"
+ipython = "^8.6.0"
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+python_files = "*_test.py"
+testpaths = ["tests"]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

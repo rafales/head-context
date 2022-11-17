@@ -1,0 +1,23 @@
+# PYTHON
+/.venv
+/poetry.toml
+__pycache__
+*.pyc
+pip-*.txt
+/dist/
+/.mypy_cache
+/.pytest_cache
+
+# IDEs
+.idea
+.vscode
+
+# OS
+.DS_Store
+._*
+*~
+Thumbs.db
+[Dd]esktop.ini
+
+# OTHER
+.env
