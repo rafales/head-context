@@ -15,7 +15,7 @@ Imagine a form widget, which requires a heavy image processing library that we w
 <head>
     <title>My Title!</title>
     <!-- this is where we want all our js/css rendered to be rendered -->
-    {{ meta_placeholder() }}
+    {{ head_placeholder() }}
 </head>
 <body>
     {% include "my-cool-component.html" %}
