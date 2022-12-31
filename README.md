@@ -65,3 +65,18 @@ env.add_extension("head_context.jinja_ext.HeadContextExtension")
 ```
 
 and that's it! From now on you can use `push_css()`/`push_js()`/`push_preload()` and `head_placeholder()`.
+
+## Usage with Flask
+
+To use this extension with `Flask` simply add it when configuring the app:
+
+```python
+
+def create_app():
+    app = Flask("app", __name__)
+    app.jinja_env.add_extension("head_context.jinja_ext.HeadContextExtension")
+    app.jinja_env.add_extension("jinja2.ext.do")
+    
+    return app
+
+```
