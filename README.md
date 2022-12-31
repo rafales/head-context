@@ -41,8 +41,12 @@ And that's pretty much it. You can `push_js`/`push_css`/`push_preload` from anyw
 
 * Supports scripts, styles and preload directives
 * Works with Jinja2
-* Can be used outside of templates too
-  * if you want to render a custom (form) widget for example
+* Can be used from Python code too
+  * simply use `head_context.push_js/push_css/push_preload` from Python code
+  * it needs to run during template rendering though (otherwise it wouldn't make sense)
+  * useful if you have form widget rendering written in Python for example
+  * or basically any kind of rendering written in Python
+
 
 ## Installation and setup
 
@@ -80,3 +84,10 @@ def create_app():
     return app
 
 ```
+
+## FAQ
+
+### Does this work with `asyncio`?
+
+`head-context` uses `contextvars` under the hood, which are compatible with `asyncio` but it integrates with `Jinja` in a way that won't work with templates which use `asyncio` rendering. If you have any good ideas how to make it work a PR would be welcome.
+
